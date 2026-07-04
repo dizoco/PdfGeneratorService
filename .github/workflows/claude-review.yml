@@ -1,0 +1,10 @@
+name: Claude Review
+
+on:
+  pull_request:
+    branches: [develop]
+
+jobs:
+  claude-review:
+    uses: dizoco/.github/.github/workflows/claude-review.yml@main
+    secrets: inherit
