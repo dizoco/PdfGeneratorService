@@ -1,0 +1,14 @@
+<Project>
+  <!-- Estándares de análisis estático de Dizoco: los analizadores Roslyn corren en cada
+       build y cualquier warning (incluidas vulnerabilidades NuGet, NU1901-NU1904) falla
+       la compilación. El CI usa esta misma configuración.
+       Para endurecer más adelante: AnalysisLevel=latest-recommended. -->
+  <PropertyGroup>
+    <AnalysisLevel>latest</AnalysisLevel>
+    <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <!-- Deuda técnica de nullability preexistente (entidades sin 'required', Email nullable
+         en User). Siguen siendo warnings visibles; quitar esta excepción al saldarla. -->
+    <WarningsNotAsErrors>CS8618;CS8601;CS8602;CS8625</WarningsNotAsErrors>
+  </PropertyGroup>
+</Project>
