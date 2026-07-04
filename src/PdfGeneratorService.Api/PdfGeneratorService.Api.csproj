@@ -6,7 +6,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.9" />
+    <!-- Referencia directa: la transitiva 2.0.0 tiene vulnerabilidad conocida (GHSA-v5pm-xwqc-g5wc) -->
+    <PackageReference Include="Microsoft.OpenApi" Version="2.7.5" />
     <PackageReference Include="Scalar.AspNetCore" Version="2.14.11" />
   </ItemGroup>
 

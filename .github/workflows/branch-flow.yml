@@ -1,0 +1,9 @@
+name: Branch Flow
+
+on:
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  branch-flow:
+    uses: dizoco/.github/.github/workflows/branch-flow.yml@main
