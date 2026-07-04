@@ -11,6 +11,9 @@ env:
    APP_SERVICE_NAME: dizoco-pdfgenapi
    RESOURCE_GROUP: rg-dyzoco-common
 
+permissions:
+  contents: read
+
 jobs:
    build-and-deploy:
      name: Build, Push & Deploy
