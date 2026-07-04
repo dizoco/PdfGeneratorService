@@ -8,3 +8,11 @@ jobs:
   claude-review:
     uses: dizoco/.github/.github/workflows/claude-review.yml@main
     secrets: inherit
+    # El default de la org es read-only; el reusable necesita estos permisos
+    # y un workflow llamado no puede exceder los del caller.
+    permissions:
+      contents: read
+      pull-requests: write
+      issues: write
+      id-token: write
+      actions: read
