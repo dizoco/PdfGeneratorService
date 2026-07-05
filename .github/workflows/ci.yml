@@ -4,6 +4,9 @@ on:
   pull_request:
     branches: [develop]
 
+permissions:
+  contents: read
+
 jobs:
   ci:
     uses: dizoco/.github/.github/workflows/ci-dotnet.yml@main
